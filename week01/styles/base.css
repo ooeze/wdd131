@@ -16,12 +16,14 @@ nav ul {
     justify-content: space-evenly;
     background-color: #000000;
     text-decoration: none;
+    padding: 20px;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    padding: 20px;
 }
 
 nav a:hover {
@@ -36,20 +38,21 @@ nav a:hover {
     text-align: left;
     gap: 50px;
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 10px auto;
     padding: 20px;
 }
 
 img {
-    width: 200px;
-
+    width: 300px;
+    padding-right: 50px;
 }
 
 .card1,
 .card2 {
-    border: solid;
+    border: solid, 1px;
     color: rgb(255, 255, 255);
-    border-radius: 20px;
+    border-radius: 30px;
+    border-color: rgb(209, 214, 214);
 }
 
 p {
@@ -67,7 +70,7 @@ h2 {
 
 header ul {
     text-align: left;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
     background-color: #000000;
     color: #ffffff;
 }
@@ -100,8 +103,4 @@ aside {
 aside img {
     width: 200px;
     height: auto;
-}
-
-h3 {
-    text-align: center;
 }
