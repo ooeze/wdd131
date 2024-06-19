@@ -9,14 +9,16 @@ header {
     background-color: #000000;
     color: #fff;
     font-size: 20px;
+    
 }
 
 nav ul {
     display: flex;
     justify-content: space-evenly;
     background-color: #000000;
-    text-decoration: none;
+    text-decoration:none;
     padding: 20px;
+    list-style-type: none;
 }
 
 nav a {
@@ -37,13 +39,14 @@ nav a:hover {
     color: #fff;
     text-align: left;
     gap: 50px;
-    max-width: 1200px;
+    max-width: auto;
     margin: 10px auto;
     padding: 20px;
 }
 
 img {
-    width: 300px;
+    width: auto;
+    height: 200px;
     padding-right: 50px;
 }
 
@@ -77,13 +80,11 @@ header ul {
 
 footer {
     background-color: rgb(204, 200, 200);
-    text-align: right;
     font-size: 20px;
 }
 
 
-h2,
-h1 {
+h2, h1 {
     border-bottom: 20px;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
