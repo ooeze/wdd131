@@ -28,11 +28,12 @@ nav a {
     padding: 20px;
 }
 
-nav a:hover {
+nav a: hover {
     background-color: #641111;
 }
 
 .main {
+    max-width: 1200px;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-column: 1 / 2;
