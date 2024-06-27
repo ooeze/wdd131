@@ -1,5 +1,5 @@
 body {
-    font-family: 'poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -28,11 +28,13 @@ nav a {
     padding: 20px;
 }
 
-nav a:hover {
-    background-color: #641111;
+nav ul li a: hover {
+    background-color: #F1C40F;
+    color: #000;
 }
 
 .main {
+    max-width: 1200px;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-column: 1 / 2;
