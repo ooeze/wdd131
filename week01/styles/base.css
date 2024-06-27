@@ -12,6 +12,10 @@ header {
 
 }
 
+nav{
+    display: flex;
+}
+
 nav ul {
     display: flex;
     justify-content: space-evenly;
