@@ -28,8 +28,9 @@ nav a {
     padding: 20px;
 }
 
-nav a: hover {
-    background-color: #641111;
+nav ul li a: hover {
+    background-color: #F1C40F;
+    color: #000;
 }
 
 .main {
