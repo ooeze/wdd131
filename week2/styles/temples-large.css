@@ -17,12 +17,22 @@ h1 {
 }
 
 .navigation {
+    display: flex;
+    /* Added display flex to use flex properties */
     flex-direction: row;
 }
 
 .navigation a {
     display: block;
     padding: 1rem;
+}
+
+.navigation a:hover {
+    /* Added hover pseudo-class */
+    color: #007bff;
+    /* Example color on hover */
+    text-decoration: underline;
+    /* Example style on hover */
 }
 
 .container {
