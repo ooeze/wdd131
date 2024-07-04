@@ -144,7 +144,7 @@ footer {
     grid-row: 3 / 4;
 }
 
-/* Media Query for Large Screens */
+/* Media Query Large Screens */
 @media (min-width: 769px) {
     .weather-icon-wrapper img {
         display: inline-block;
