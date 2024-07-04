@@ -1,0 +1,149 @@
+:root {
+    --primary-color: #4e3030;
+    --secondary-color: #081e81;
+    --text-color: #ffffff;
+    --background-color: #f5f5f5;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2 {
+    font-family: 'DM Serif Display', serif;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 2rem;
+    text-align: center;
+}
+
+.color-line {
+    height: 1rem;
+    background-color: var(--secondary-color);
+    width: 100%;
+}
+
+.hero {
+    display: none;
+}
+
+main {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 2rem;
+    min-height: calc(100vh - 200px);
+    background: url('/wdd131/images/hero-large.webp') no-repeat center center;
+    background-size: cover;
+}
+
+.data {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 40%;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    position: relative;
+}
+
+.data ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.data ul li {
+    margin-bottom: 1rem;
+}
+
+.data h2 {
+    color: var(--text-color);
+    position: relative;
+    padding-left: 4px;
+    z-index: 1;
+}
+
+.data h2::before {
+    content: '';
+    padding: 1.2rem;
+    position: absolute;
+    left: -2.5rem;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background-color: var(--secondary-color);
+    z-index: -1;
+}
+
+.weather {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 40%;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    align-self: end;
+    justify-self: end;
+}
+
+.weather h2 {
+    color: var(--text-color);
+    position: relative;
+    padding-left: 4px;
+    z-index: 1;
+}
+
+.weather h2::before {
+    content: '';
+    padding: 1.2rem;
+    position: absolute;
+    left: -2.5rem;
+    top: 0;
+    bottom: 0;
+    width: 80%;
+    background-color: var(--secondary-color);
+    z-index: -1;
+}
+
+.weather-icon {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.weather-icon-wrapper::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 2rem;
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+}
+
+/* Media Query for Large Screens */
+@media (min-width: 769px) {
+    .weather-icon-wrapper img {
+        display: inline-block;
+    }
+}
