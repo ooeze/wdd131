@@ -37,6 +37,7 @@ header {
 
 .hero {
     display: none;
+    
 }
 
 main {
@@ -46,12 +47,14 @@ main {
     gap: 1rem;
     padding: 2rem;
     min-height: calc(100vh - 200px);
-    background: url('/wdd131/images/hero-large.webp') no-repeat center center;
+    background-image: url('/images/hero-large.webp');
+    background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
 }
 
 .data {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.442);
     padding: 2rem;
     border-radius: 8px;
     width: 40%;
@@ -89,7 +92,7 @@ main {
 }
 
 .weather {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.442);
     padding: 2rem;
     border-radius: 8px;
     width: 40%;
