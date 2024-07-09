@@ -1,0 +1,49 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+#menu {
+    display: none;
+}
+
+.main-h {
+    grid-column: 1 / -1;
+}
+
+.navigation {
+    flex-direction: row;
+    text-align: center;
+}
+
+.navigation a {
+    display: block;
+    padding: 1rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+figure {
+    margin-bottom: 0;
+}
+
+footer {
+    position: relative;
+}
