@@ -30,29 +30,82 @@ input[type="text"], input[type="date"], select, textarea {
     border-radius: 5px;
 }
 
-.rating {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
+input[type="radio"] {
+	display: none;
+	position: relative;
+	caret-color: rgba(0, 0, 0, 0);
+} 
+
+.stars {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: left;
 }
 
-.rating input {
-    display: none;
+.stars > label {
+	color: gold;
+	width: 30px;
+	height: 30px;
+	font-size: 2rem;
+	margin-left: 5px;
+	display: flex;
+	align-items: center;
+	caret-color: rgba(0, 0, 0, 0); /* remove blinking cursor*/
 }
 
-.rating label {
-    font-size: 2rem;
-    cursor: pointer;
+.stars > label:hover {
+	color: #000;
 }
 
+.stars > label::before {
+	content: "\2606";
+}
+
+.stars input:checked ~ label::before {
+	content: "\2605";
+}
 .features {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
 }
 
-input[type="checkbox"] {
-    margin-right: 10px;
+.features label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.features input[type="checkbox"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.features input[type="checkbox"] + label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+.features input[type="checkbox"]:checked + label::before {
+    content: "✔";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #000;
 }
 
 input[type="submit"] {
