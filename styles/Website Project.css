@@ -1,0 +1,356 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+}
+
+header .logo {
+    font-size: 24px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero P {
+    text-align: center;
+    background-color: #ffffff00;
+}
+
+.hero button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 100px;
+}
+
+.benefits {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+
+.benefit {
+    width: 20%;
+    padding: 40px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    filter: drop-shadow(2px 5px 5px rgba(0, 0, 0, 0.3));
+    margin: 10px;
+}
+
+.logo {
+    width: 50%;
+    height: 50%;
+}
+
+.how-it-works {
+    padding: 20px;
+    text-align: center;
+}
+
+.how-it-works {
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    justify-content: space-evenly;
+}
+
+.how-it-works ol {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    margin: 10px auto;
+    padding: 10px;
+    max-width: 1000px;
+    justify-content: space-around;
+}
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    padding-right: 50px;
+    padding-left: 150px;
+    padding-bottom: 150px;
+}
+
+#share-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 32px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#share-btn:hover {
+    background-color: #45a049;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#share-btn:active {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+}
+
+.product img {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.community-forum,
+.sales-page,
+.blog {
+    padding: 20px;
+}
+
+.community-forum nav,
+.sales-page nav,
+.blog nav {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.community-forum nav ul,
+.sales-page nav ul,
+.blog nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.community-forum nav ul li,
+.sales-page nav ul li,
+.blog nav ul li {
+    margin-left: 20px;
+}
+
+.community-forum nav ul li a,
+.sales-page nav ul li a,
+.blog nav ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.discussion,
+.article,
+.sales-product {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Existing styles... */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    transition: opacity 0.5s ease-in-out;
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 10%;
+    user-select: none;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.caption {
+    position: absolute;
+    bottom: 310px;
+    right: 60px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: right;
+}
+
+.caption p {
+    margin: 10px;
+    color: white;
+    padding-right: 10px;
+    font-size: 20px;
+    margin-right: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.caption h2 {
+    margin: 10px;
+    color: white;
+    padding-right: 30px;
+    font-size: 40px;
+    margin-right: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding-top: 50px;
+}
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: #fff;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: none;
+}
+
+/* Media query for phone-sized screens */
+@media (max-width: 768px) {
+    .phose {
+        display: block;
+    }
+
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 0;
+    }
+
+    header nav ul li {
+        margin: 0;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    header nav ul.show {
+        display: flex;
+    }
+
+    #menu {
+        display: block;
+    }
+
+    .benefit {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .how-it-works ol {
+        flex-direction: column;
+    }
+
+    .products {
+        flex-direction: column;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .product img {
+        width: 100%;
+    }
+}
+
+.navigation {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: #fff;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.navigation::before {
+    content: "☰";
+}
+
+.navigation.open::before {
+    content: "❎";
+}
