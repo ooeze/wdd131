@@ -12,9 +12,10 @@ header {
     align-items: center;
     position: sticky;
 }
- header{
+
+header {
     display: flex;
- }
+}
 
 header {
     font-size: 10px;
@@ -22,7 +23,7 @@ header {
 
 header nav ul {
     list-style: none;
-    
+
     padding: 20px;
     display: flex;
 }
@@ -68,7 +69,7 @@ header nav ul li a {
 .logo {
     width: 100%;
     height: 50%;
-    
+
 }
 
 .how-it-works {
