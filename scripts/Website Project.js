@@ -1,12 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
     const content = document.getElementById('content');
     const navLinks = document.querySelectorAll('.navigation a');
-    const hamButton = document.querySelector('.navigation');
+    const hamButton = document.getElementById('menu');
+    const navMenu = document.querySelector('nav ul');
 
-
-
+    // Load the default page (home) initially
     loadPage('home');
 
+    // Handle navigation link clicks
     navLinks.forEach(link => {
         link.addEventListener('click', function (event) {
             event.preventDefault();
@@ -14,9 +15,18 @@ document.addEventListener('DOMContentLoaded', function () {
             link.classList.add('active');
             const page = link.getAttribute('data-page');
             loadPage(page);
+            if (window.innerWidth <= 768) {
+                navMenu.classList.remove('show');
+            }
         });
     });
 
+    // Handle hamburger menu button click
+    hamButton.addEventListener('click', function () {
+        navMenu.classList.toggle('show');
+    });
+
+    // Function to load pages
     function loadPage(page) {
         let html = '';
         switch (page) {
@@ -28,15 +38,15 @@ document.addEventListener('DOMContentLoaded', function () {
                                 <div class="slide active">
                                     <img src="images/pexels-diva-plavalaguna-5710884.jpg" alt="Slide 1">
                                     <div class="caption">
-                                        <h2>Convinience</h2>
-                                        <p>You can shop from the convinience of your home, no need to go to the market</p>
+                                        <h2>Convenience</h2>
+                                        <p>You can shop from the convenience of your home, no need to go to the market</p>
                                     </div>
                                 </div>
                                 <div class="slide">
                                     <img src="images/pexels-greta-hoffman-9706144.jpg" alt="Slide 2">
                                     <div class="caption">
                                         <h2>Safety</h2>
-                                        <p>Be sure that all our products are sources from the most sanitary places</p>
+                                        <p>Be sure that all our products are sourced from the most sanitary places</p>
                                     </div>
                                 </div>
                                 <div class="slide">
@@ -50,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                     <img src="images/pexels-denniz-futalan-339724-18717510.jpg" alt="Slide 4">
                                     <div class="caption">
                                         <h2>Affordable</h2>
-                                        <p>Buying in bulk enables you to stop food wastage while getting it a affordable rates</p>
+                                        <p>Buying in bulk enables you to stop food wastage while getting it at affordable rates</p>
                                     </div>
                                 </div>
                             </div>
@@ -72,32 +82,24 @@ document.addEventListener('DOMContentLoaded', function () {
                             <p>By joining a group, you can pool your resources and increase your buying power to negotiate better prices.</p>
                         </div>
                     </section>
-
                     <h1>Explore</h1>
-                   
-
-                    <section 
-
-                    </section>
-
-
                     <section class="products" id="products">
                         <div class="product">
-                            <img src="images/rice.png" alt="Slide 1">
+                            <img src="images/rice.png" alt="Rice">
                             <h3>Rice</h3>
                             <p>Product Description</p>
                             <p>Price: $103</p>
                             <button id="share-btn">Share</button>
                         </div>
                         <div class="product">
-                        <img src="images/yam.png" alt="Slide 1">
+                            <img src="images/yam.png" alt="Yam">
                             <h3>Yam</h3>
                             <p>Product Description</p>
                             <p>Price: $45.00</p>
                             <button id="share-btn">Share</button>
                         </div>
                         <div class="product">
-                         <img src="images/oni.png" alt="Slide 1">
+                            <img src="images/oni.png" alt="Onion">
                             <h3>Onion</h3>
                             <p>Product Description</p>
                             <p>Price: $10.20</p>
@@ -160,58 +162,22 @@ document.addEventListener('DOMContentLoaded', function () {
                 html = `
                     <section class="blog" id="blog">
                         <h2><i class="fas fa-blog"></i> Blog</h2>
-                        <nav class="blog-nav">
-                            <ul>
-                                <li><a href="#">Latest Articles</a></li>
-                                <li><a href="#">Categories</a></li>
-                                <li><a href="#">Search</a></li>
-                                <li><a href="#">Create Article</a></li>
-                            </ul>
-                        </nav>
-                        <div class="article">
+                        <article>
                             <h3>Article Title</h3>
                             <p>Author: John Doe</p>
                             <p>Date: XX/XX/XXXX</p>
-                        </div>
-                        <div class="article">
+                            <p>Blog content goes here...</p>
+                        </article>
+                        <article>
                             <h3>Article Title</h3>
                             <p>Author: Jane Smith</p>
                             <p>Date: XX/XX/XXXX</p>
-                        </div>
+                            <p>Blog content goes here...</p>
+                        </article>
                     </section>
-                    
                 `;
                 break;
         }
         content.innerHTML = html;
-        if (page === 'home') {
-            initializeSlider();
-        }
-    }
-
-    function initializeSlider() {
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
-
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.style.display = i === index ? 'block' : 'none';
-            });
-        }
-
-        function changeSlide(direction) {
-            currentSlide += direction;
-            if (currentSlide >= slides.length) {
-                currentSlide = 0;
-            } else if (currentSlide < 0) {
-                currentSlide = slides.length - 1;
-            }
-            showSlide(currentSlide);
-        }
-
-        showSlide(currentSlide);
-
-        document.querySelector('.prev').addEventListener('click', () => changeSlide(-1));
-        document.querySelector('.next').addEventListener('click', () => changeSlide(1));
     }
 });
