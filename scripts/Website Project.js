@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     const content = document.getElementById('content');
     const navLinks = document.querySelectorAll('.navigation a');
-    const hamButton = document.getElementById('menu');
-    const navMenu = document.querySelector('nav ul');
+    const hamButton = document.getElementById('menu-toggle');
+    const navMenu = document.querySelector('.navigation ul');
 
     // Load the default page (home) initially
     loadPage('home');
@@ -179,5 +179,39 @@ document.addEventListener('DOMContentLoaded', function () {
                 break;
         }
         content.innerHTML = html;
+        initializeSlider();
     }
+
+    // Slider functionality
+    function initializeSlider() {
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+
+        function changeSlide(n) {
+            currentIndex += n;
+            if (currentIndex >= totalSlides) {
+                currentIndex = 0;
+            } else if (currentIndex < 0) {
+                currentIndex = totalSlides - 1;
+            }
+            showSlide(currentIndex);
+        }
+
+        document.querySelector('.prev').addEventListener('click', () => changeSlide(-1));
+        document.querySelector('.next').addEventListener('click', () => changeSlide(1));
+
+        showSlide(currentIndex);
+    }
+
+    initializeSlider(); // Initialize the slider on page load
 });
