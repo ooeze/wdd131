@@ -121,14 +121,14 @@ document.addEventListener('DOMContentLoaded', function () {
                             </ul>
                         </nav>
                         <div class="discussion">
-                            <h3>Discussion Title</h3>
-                            <p>Author: John Doe</p>
-                            <p>Date: XX/XX/XXXX</p>
+                            <h3>How to buy in Bluk</h3>
+                            <p>Author: Klaudia Habek</p>
+                            <p>Question: How can I buy yams in bulk from the farm, will it be cheaper?</p>
                         </div>
                         <div class="discussion">
-                            <h3>Discussion Title</h3>
-                            <p>Author: Jane Smith</p>
-                            <p>Date: XX/XX/XXXX</p>
+                            <h3>Order</h3>
+                            <p>Author:Tiffany Curtis</p>
+                            <p>Question: How long will my order take to arrive?</p>
                         </div>
                     </section>
                 `;
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function () {
             case 'sales-page':
                 html = `
                     <section class="sales-page" id="sales-page">
-                        <h2><i class="fas fa-shopping-cart"></i> Sales Page</h2>
+                        <h2><i class="fas fa-shopping-cart"></i> Order</h2>
                         <nav class="sales-nav">
                             <ul>
                                 <li><a href="#">All Products</a></li>
@@ -145,35 +145,47 @@ document.addEventListener('DOMContentLoaded', function () {
                                 <li><a href="#">My Cart</a></li>
                             </ul>
                         </nav>
-                        <div class="sales-product">
-                            <h3>Product Name</h3>
+                    <section class="products" id="products">
+                        <div class="product">
+                            <img src="images/rice.png" alt="Rice">
+                            <h3>Rice</h3>
                             <p>Product Description</p>
-                            <p>Price: $XX.XX</p>
+                            <p>Price: $103</p>
+                            <button id="share-btn">Share</button>
                         </div>
-                        <div class="sales-product">
-                            <h3>Product Name</h3>
+                        <div class="product">
+                            <img src="images/yam.png" alt="Yam">
+                            <h3>Yam</h3>
                             <p>Product Description</p>
-                            <p>Price: $XX.XX</p>
+                            <p>Price: $45.00</p>
+                            <button id="share-btn">Share</button>
                         </div>
+                        <div class="product">
+                            <img src="images/oni.png" alt="Onion">
+                            <h3>Onion</h3>
+                            <p>Product Description</p>
+                            <p>Price: $10.20</p>
+                            <button id="share-btn">Share</button>
+                        </div>
+                    </section>
+
                     </section>
                 `;
                 break;
             case 'blog':
                 html = `
                     <section class="blog" id="blog">
-                        <h2><i class="fas fa-blog"></i> Blog</h2>
-                        <article>
-                            <h3>Article Title</h3>
-                            <p>Author: John Doe</p>
-                            <p>Date: XX/XX/XXXX</p>
-                            <p>Blog content goes here...</p>
-                        </article>
-                        <article>
-                            <h3>Article Title</h3>
-                            <p>Author: Jane Smith</p>
-                            <p>Date: XX/XX/XXXX</p>
-                            <p>Blog content goes here...</p>
-                        </article>
+                        <div class="discussion">
+                        <img src="images/oni.png" alt="Onion">
+                            <h3><a href="https://www.reelpaper.com/blogs/reel-talk/why-is-buying-items-in-bulk-cheaper#:~:text=In%20other%20words%2C%20manufacturers%20spend,the%20form%20of%20bulk%20pricing." target="_blank">Why Bulk Buying</a></h3>
+                            <p>Author: Klaudia Habek</p>
+                            <p>Date: March 29, 2023</p>
+                        </div>
+                        <div class="discussion">
+                            <h3><a href="https://www.nerdwallet.com/article/finance/buy-in-bulk" target="_blank">How to buy in Bluk</a></h3>
+                            <p>Author:<a href="https://www.nerdwallet.com/author/tiffany-curtis" target="_blank">Tiffany Curtis</a></p>
+                            <p>Date: Oct 26, 2023</p>
+                        </div>
                     </section>
                 `;
                 break;
