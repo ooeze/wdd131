@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    
+
     color: #000000;
     padding: 0 100px;
     display: flex;
@@ -23,12 +23,12 @@ header nav ul {
     display: flex;
     position: relative;
     background-color: rgb(255, 255, 255);
-    
+
 }
 
 header nav ul li {
     margin-left: 20px;
-    
+
 }
 
 header nav ul li a {
@@ -65,9 +65,9 @@ header nav ul li a {
     margin: 10px;
 }
 
-.logo img{
-    width: 100px; 
-    height: auto; 
+.logo img {
+    width: 100px;
+    height: auto;
     max-height: 50px;
 }
 
@@ -125,10 +125,10 @@ header nav ul li a {
     text-align: center;
 }
 
-.blog img{
+.blog img {
     display: flex;
-    width: 100px; 
-    height: auto; 
+    width: 100px;
+    height: auto;
     max-height: 100px;
 }
 
@@ -296,7 +296,7 @@ h1 {
     }
 
     #share-btn {
-       margin-bottom: 50px;
+        margin-bottom: 50px;
     }
 
     header nav ul {
@@ -320,12 +320,12 @@ h1 {
         padding: 20px;
         text-align: center;
         width: 100%;
-        
+
     }
 
     #menu {
         display: block;
-        
+
     }
 
     .benefit {
@@ -392,7 +392,7 @@ h1 {
 
     .navigation ul li {
         margin: 0;
-        
+
         text-align: left;
         width: 100%;
     }
