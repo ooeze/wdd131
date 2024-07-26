@@ -22,11 +22,13 @@ header nav ul {
     list-style: none;
     display: flex;
     position: relative;
-    background-color: rgba(255, 255, 255, 0.442);
+    background-color: rgb(255, 255, 255);
+    
 }
 
 header nav ul li {
     margin-left: 20px;
+    
 }
 
 header nav ul li a {
@@ -131,11 +133,7 @@ header nav ul li a {
 }
 
 
-.community-forum,
-.sales-page,
-.blog {
-    padding: 20px;
-}
+
 
 .community-forum nav,
 .sales-page nav,
@@ -174,6 +172,8 @@ header nav ul li a {
     border: 1px solid #ccc;
     margin-bottom: 20px;
     width: 50%;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 
@@ -308,7 +308,7 @@ h1 {
         right: 0;
         width: 100%;
         padding: 0;
-        align-items: center;
+
     }
 
     header nav ul.show {
@@ -317,13 +317,15 @@ h1 {
 
     header nav ul li {
         margin: 0;
-        padding: 10px 0;
+        padding: 20px;
         text-align: center;
         width: 100%;
+        
     }
 
     #menu {
         display: block;
+        
     }
 
     .benefit {
@@ -376,11 +378,13 @@ h1 {
     .navigation ul {
         display: none;
         flex-direction: column;
-        background-color: rgba(255, 255, 255, 0.442);
+        background-color: rgb(255, 255, 255);
         position: fixed;
         right: 0;
         width: 100%;
+
     }
+
 
     .navigation ul.show {
         display: flex;
